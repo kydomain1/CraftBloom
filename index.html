@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CraftBloom is your trusted source for lifestyle inspiration and expert recommendations across fashion, beauty, home, travel, finance, and food. Discover quality content and product reviews.">
+    <meta name="keywords" content="lifestyle blog, fashion, beauty, home garden, travel, finance, food, product reviews, sustainable living">
+    <meta name="author" content="CraftBloom">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://craftbloom.com/">
+    <meta property="og:title" content="CraftBloom - Magazine & Editorial Blog">
+    <meta property="og:description" content="Where Lifestyle Meets Excellence. Expert recommendations for fashion, beauty, home, travel, finance, and food.">
+    <meta property="og:image" content="https://craftbloom.com/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://craftbloom.com/">
+    <meta property="twitter:title" content="CraftBloom - Magazine & Editorial Blog">
+    <meta property="twitter:description" content="Where Lifestyle Meets Excellence. Expert recommendations for fashion, beauty, home, travel, finance, and food.">
+    <meta property="twitter:image" content="https://craftbloom.com/images/twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2C5F7C">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    
+    <title>CraftBloom - Magazine & Editorial Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+<body>
+    <!-- Reading Progress Bar -->
+    <div id="reading-progress"></div>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+                <div class="header-date">
+                    <span id="current-date"></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-header">
+            <div class="container">
+                <div class="logo">
+                    <h1>CraftBloom</h1>
+                    <p class="tagline">Where Lifestyle Meets Excellence</p>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#" data-category="fashion">Fashion & Accessories</a></li>
+                    <li><a href="#" data-category="beauty">Health & Beauty</a></li>
+                    <li><a href="#" data-category="home">Home & Garden</a></li>
+                    <li><a href="#" data-category="travel">Travel & Accommodation</a></li>
+                    <li><a href="#" data-category="finance">Finance & Insurance</a></li>
+                    <li><a href="#" data-category="food">Food & Beverage</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search articles...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <button class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Featured Article -->
+    <section class="featured-section">
+        <div class="container">
+            <div class="featured-article" data-aos="fade-up">
+                <div class="featured-image">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=600&fit=crop" alt="Sustainable Fashion Guide">
+                    <div class="category-badge fashion">Fashion & Accessories</div>
+                </div>
+                <div class="featured-content">
+                    <h2>The Ultimate Guide to Building a Sustainable Wardrobe in 2025</h2>
+                    <div class="article-meta">
+                        <span class="author"><i class="far fa-user"></i> Emma Richardson</span>
+                        <span class="date"><i class="far fa-calendar"></i> March 15, 2025</span>
+                        <span class="reading-time"><i class="far fa-clock"></i> 8 min read</span>
+                    </div>
+                    <p class="excerpt">Discover how to curate a timeless, eco-friendly wardrobe that reflects your personal style while making conscious choices for the planet. From capsule wardrobes to ethical brands, we explore everything you need to know.</p>
+                    <a href="article-1.html" class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="articles-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest Stories</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="fashion">Fashion</button>
+                    <button class="filter-btn" data-filter="beauty">Beauty</button>
+                    <button class="filter-btn" data-filter="home">Home</button>
+                    <button class="filter-btn" data-filter="travel">Travel</button>
+                    <button class="filter-btn" data-filter="finance">Finance</button>
+                    <button class="filter-btn" data-filter="food">Food</button>
+                </div>
+            </div>
+
+            <div class="articles-grid" id="articles-container">
+                <!-- Article 2 -->
+                <article class="article-card beauty" data-aos="fade-up">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&h=400&fit=crop" alt="Skincare Routine">
+                        <div class="category-badge beauty">Health & Beauty</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>10 Skincare Products Dermatologists Actually Recommend</h3>
+                        <div class="article-meta">
+                            <span class="date"><i class="far fa-calendar"></i> January 22, 2025</span>
+                            <span class="reading-time"><i class="far fa-clock"></i> 6 min read</span>
+                        </div>
+                        <p>We consulted top dermatologists to bring you the most effective skincare products that deliver real results...</p>
+                        <a href="article-2.html" class="read-more">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="article-card home" data-aos="fade-up" data-aos-delay="100">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=600&h=400&fit=crop" alt="Urban Apartment with Indoor Plants" loading="lazy">
+                        <div class="category-badge home">Home & Garden</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Transform Your Space: Indoor Gardening for Urban Living</h3>
+                        <div class="article-meta">
+                            <span class="date"><i class="far fa-calendar"></i> April 8, 2025</span>
+                            <span class="reading-time"><i class="far fa-clock"></i> 7 min read</span>
+                        </div>
+                        <p>Bring nature indoors with these expert tips on creating a thriving indoor garden, even in small apartments...</p>
+                        <a href="article-3.html" class="read-more">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="article-card travel" data-aos="fade-up" data-aos-delay="200">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=600&h=400&fit=crop" alt="Kotor Montenegro Bay" loading="lazy">
+                        <div class="category-badge travel">Travel & Accommodation</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Hidden Gems: 7 Underrated European Destinations for Summer 2025</h3>
+                        <div class="article-meta">
+                            <span class="date"><i class="far fa-calendar"></i> June 12, 2025</span>
+                            <span class="reading-time"><i class="far fa-clock"></i> 9 min read</span>
+                        </div>
+                        <p>Skip the crowded tourist traps and discover these breathtaking European destinations that offer authentic experiences...</p>
+                        <a href="article-4.html" class="read-more">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="article-card finance" data-aos="fade-up">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&h=400&fit=crop" alt="Financial Planning" loading="lazy">
+                        <div class="category-badge finance">Finance & Insurance</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Smart Investment Strategies for Millennials and Gen Z</h3>
+                        <div class="article-meta">
+                            <span class="date"><i class="far fa-calendar"></i> February 28, 2025</span>
+                            <span class="reading-time"><i class="far fa-clock"></i> 10 min read</span>
+                        </div>
+                        <p>Navigate the complex world of investing with strategies tailored for young professionals building long-term wealth...</p>
+                        <a href="article-5.html" class="read-more">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="article-card food" data-aos="fade-up" data-aos-delay="100">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=400&fit=crop" alt="Gourmet Food">
+                        <div class="category-badge food">Food & Beverage</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Farm-to-Table: The Best Organic Food Delivery Services of 2025</h3>
+                        <div class="article-meta">
+                            <span class="date"><i class="far fa-calendar"></i> August 5, 2025</span>
+                            <span class="reading-time"><i class="far fa-clock"></i> 7 min read</span>
+                        </div>
+                        <p>We tested the top organic food delivery services to help you find the perfect fit for your healthy lifestyle...</p>
+                        <a href="article-6.html" class="read-more">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content" data-aos="fade-up">
+                <h2>Stay Inspired</h2>
+                <p>Subscribe to our newsletter for the latest stories, exclusive content, and curated recommendations delivered to your inbox.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>CraftBloom</h3>
+                    <p>Your trusted source for lifestyle inspiration, product reviews, and expert recommendations across fashion, beauty, home, travel, finance, and culinary experiences.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#" data-category="fashion">Fashion & Accessories</a></li>
+                        <li><a href="#" data-category="beauty">Health & Beauty</a></li>
+                        <li><a href="#" data-category="home">Home & Garden</a></li>
+                        <li><a href="#" data-category="travel">Travel & Accommodation</a></li>
+                        <li><a href="#" data-category="finance">Finance & Insurance</a></li>
+                        <li><a href="#" data-category="food">Food & Beverage</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="advertise.html">Advertise</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> hello@craftbloom.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> New York, NY 10001</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 CraftBloom. All rights reserved. Designed with passion for quality content.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

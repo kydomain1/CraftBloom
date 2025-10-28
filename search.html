@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - CraftBloom</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+                <div class="header-date">
+                    <span id="current-date"></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-header">
+            <div class="container">
+                <div class="logo">
+                    <h1>CraftBloom</h1>
+                    <p class="tagline">Where Lifestyle Meets Excellence</p>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" data-category="fashion">Fashion & Accessories</a></li>
+                    <li><a href="#" data-category="beauty">Health & Beauty</a></li>
+                    <li><a href="#" data-category="home">Home & Garden</a></li>
+                    <li><a href="#" data-category="travel">Travel & Accommodation</a></li>
+                    <li><a href="#" data-category="finance">Finance & Insurance</a></li>
+                    <li><a href="#" data-category="food">Food & Beverage</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search articles...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <button class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Search Hero Section -->
+    <section class="page-hero" style="padding: 60px 0 40px;">
+        <div class="container">
+            <h1>Search Results</h1>
+            <p id="search-query-display"></p>
+        </div>
+    </section>
+
+    <!-- Search Bar Section -->
+    <section style="padding: 40px 0; background-color: var(--gray-light);">
+        <div class="container">
+            <div style="max-width: 700px; margin: 0 auto;">
+                <form id="main-search-form" style="display: flex; gap: 15px;">
+                    <input 
+                        type="text" 
+                        id="main-search-input" 
+                        placeholder="Enter keywords to search..." 
+                        style="flex: 1; padding: 18px 25px; border: 2px solid var(--border-color); border-radius: 50px; font-size: 1.1rem; transition: all 0.3s ease;"
+                    >
+                    <button 
+                        type="submit" 
+                        style="padding: 18px 40px; background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%); color: white; border: none; border-radius: 50px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px;"
+                    >
+                        <i class="fas fa-search" style="margin-right: 8px;"></i> Search
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section style="padding: 30px 0; border-bottom: 1px solid var(--border-color);">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <div>
+                    <p style="color: var(--text-light); font-size: 0.95rem;">
+                        <span id="results-count">Showing all articles</span>
+                    </p>
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Categories</button>
+                    <button class="filter-btn" data-filter="fashion">Fashion</button>
+                    <button class="filter-btn" data-filter="beauty">Beauty</button>
+                    <button class="filter-btn" data-filter="home">Home</button>
+                    <button class="filter-btn" data-filter="travel">Travel</button>
+                    <button class="filter-btn" data-filter="finance">Finance</button>
+                    <button class="filter-btn" data-filter="food">Food</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Results Section -->
+    <section class="articles-section">
+        <div class="container">
+            <!-- No Results Message -->
+            <div id="no-results" style="display: none; text-align: center; padding: 80px 20px;">
+                <div style="font-size: 4rem; color: var(--accent-color); margin-bottom: 20px;">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h2 style="margin-bottom: 15px;">No Results Found</h2>
+                <p style="font-size: 1.1rem; color: var(--text-light); max-width: 500px; margin: 0 auto;">
+                    We couldn't find any articles matching your search. Try different keywords or browse our categories.
+                </p>
+            </div>
+
+            <!-- Results Grid -->
+            <div class="articles-grid" id="search-results-container">
+                <!-- Article 1 - Fashion -->
+                <article class="article-card fashion" data-aos="fade-up">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop" alt="Sustainable Fashion">
+                        <div class="category-badge fashion">Fashion & Accessories</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>The Ultimate Guide to Building a Sustainable Wardrobe in 2025</h3>
+                        <div class="article-meta">
+                            <span class="date"><i class="far fa-calendar"></i> March 15, 2025</span>
+                            <span class="reading-time"><i class="far fa-clock"></i> 8 min read</span>
+                        </div>
+                        <p>Discover how to curate a timeless, eco-friendly wardrobe that reflects your personal style while making conscious choices for the planet...</p>
+                        <a href="article-1.html" class="read-more">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 2 - Beauty -->
+                <article class="article-card beauty" data-aos="fade-up" data-aos-delay="100">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&h=400&fit=crop" alt="Skincare Products">
+                        <div class="category-badge beauty">Health & Beauty</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>10 Skincare Products Dermatologists Actually Recommend</h3>
+                        <div class="article-meta">
+                            <span class="date"><i class="far fa-calendar"></i> January 22, 2025</span>
+                            <span class="reading-time"><i class="far fa-clock"></i> 6 min read</span>
+                        </div>
+                        <p>We consulted top dermatologists to bring you the most effective skincare products that deliver real results...</p>
+                        <a href="article-2.html" class="read-more">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 3 - Home -->
+                <article class="article-card home" data-aos="fade-up" data-aos-delay="200">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=600&h=400&fit=crop" alt="Urban Apartment with Indoor Plants">
+                        <div class="category-badge home">Home & Garden</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Transform Your Space: Indoor Gardening for Urban Living</h3>
+                        <div class="article-meta">
+                            <span class="date"><i class="far fa-calendar"></i> April 8, 2025</span>
+                            <span class="reading-time"><i class="far fa-clock"></i> 7 min read</span>
+                        </div>
+                        <p>Bring nature indoors with these expert tips on creating a thriving indoor garden, even in small apartments...</p>
+                        <a href="article-3.html" class="read-more">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 4 - Travel -->
+                <article class="article-card travel" data-aos="fade-up">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=600&h=400&fit=crop" alt="Kotor Montenegro Bay">
+                        <div class="category-badge travel">Travel & Accommodation</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Hidden Gems: 7 Underrated European Destinations for Summer 2025</h3>
+                        <div class="article-meta">
+                            <span class="date"><i class="far fa-calendar"></i> June 12, 2025</span>
+                            <span class="reading-time"><i class="far fa-clock"></i> 9 min read</span>
+                        </div>
+                        <p>Skip the crowded tourist traps and discover these breathtaking European destinations that offer authentic experiences...</p>
+                        <a href="article-4.html" class="read-more">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 5 - Finance -->
+                <article class="article-card finance" data-aos="fade-up" data-aos-delay="100">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&h=400&fit=crop" alt="Financial Planning">
+                        <div class="category-badge finance">Finance & Insurance</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Smart Investment Strategies for Millennials and Gen Z</h3>
+                        <div class="article-meta">
+                            <span class="date"><i class="far fa-calendar"></i> February 28, 2025</span>
+                            <span class="reading-time"><i class="far fa-clock"></i> 10 min read</span>
+                        </div>
+                        <p>Navigate the complex world of investing with strategies tailored for young professionals building long-term wealth...</p>
+                        <a href="article-5.html" class="read-more">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 6 - Food -->
+                <article class="article-card food" data-aos="fade-up" data-aos-delay="200">
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&h=400&fit=crop" alt="Organic Food">
+                        <div class="category-badge food">Food & Beverage</div>
+                    </div>
+                    <div class="article-content">
+                        <h3>Farm-to-Table: The Best Organic Food Delivery Services of 2025</h3>
+                        <div class="article-meta">
+                            <span class="date"><i class="far fa-calendar"></i> August 5, 2025</span>
+                            <span class="reading-time"><i class="far fa-clock"></i> 7 min read</span>
+                        </div>
+                        <p>We tested the top organic food delivery services to help you find the perfect fit for your healthy lifestyle...</p>
+                        <a href="article-6.html" class="read-more">Continue Reading <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Topics Section -->
+    <section style="padding: 80px 0; background-color: var(--gray-light);">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;">Popular Search Topics</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; max-width: 900px; margin: 0 auto;">
+                <a href="search.html?q=sustainable+fashion" style="padding: 12px 25px; background-color: white; border: 2px solid var(--primary-color); color: var(--primary-color); border-radius: 25px; font-weight: 600; transition: all 0.3s ease;">
+                    Sustainable Fashion
+                </a>
+                <a href="search.html?q=skincare+routine" style="padding: 12px 25px; background-color: white; border: 2px solid var(--primary-color); color: var(--primary-color); border-radius: 25px; font-weight: 600; transition: all 0.3s ease;">
+                    Skincare Routine
+                </a>
+                <a href="search.html?q=indoor+plants" style="padding: 12px 25px; background-color: white; border: 2px solid var(--primary-color); color: var(--primary-color); border-radius: 25px; font-weight: 600; transition: all 0.3s ease;">
+                    Indoor Plants
+                </a>
+                <a href="search.html?q=travel+europe" style="padding: 12px 25px; background-color: white; border: 2px solid var(--primary-color); color: var(--primary-color); border-radius: 25px; font-weight: 600; transition: all 0.3s ease;">
+                    European Travel
+                </a>
+                <a href="search.html?q=investment" style="padding: 12px 25px; background-color: white; border: 2px solid var(--primary-color); color: var(--primary-color); border-radius: 25px; font-weight: 600; transition: all 0.3s ease;">
+                    Investment Tips
+                </a>
+                <a href="search.html?q=organic+food" style="padding: 12px 25px; background-color: white; border: 2px solid var(--primary-color); color: var(--primary-color); border-radius: 25px; font-weight: 600; transition: all 0.3s ease;">
+                    Organic Food
+                </a>
+                <a href="search.html?q=beauty+products" style="padding: 12px 25px; background-color: white; border: 2px solid var(--primary-color); color: var(--primary-color); border-radius: 25px; font-weight: 600; transition: all 0.3s ease;">
+                    Beauty Products
+                </a>
+                <a href="search.html?q=home+decor" style="padding: 12px 25px; background-color: white; border: 2px solid var(--primary-color); color: var(--primary-color); border-radius: 25px; font-weight: 600; transition: all 0.3s ease;">
+                    Home Decor
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Inspired</h2>
+                <p>Subscribe to our newsletter for the latest stories and exclusive content.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>CraftBloom</h3>
+                    <p>Your trusted source for lifestyle inspiration, product reviews, and expert recommendations.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="index.html#fashion">Fashion & Accessories</a></li>
+                        <li><a href="index.html#beauty">Health & Beauty</a></li>
+                        <li><a href="index.html#home">Home & Garden</a></li>
+                        <li><a href="index.html#travel">Travel & Accommodation</a></li>
+                        <li><a href="index.html#finance">Finance & Insurance</a></li>
+                        <li><a href="index.html#food">Food & Beverage</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="advertise.html">Advertise</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> hello@craftbloom.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> New York, NY 10001</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 CraftBloom. All rights reserved. Designed with passion for quality content.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>
+

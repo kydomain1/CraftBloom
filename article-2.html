@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the 10 skincare products that dermatologists actually recommend for healthy, glowing skin. Expert-backed beauty essentials and reviews.">
+    <meta name="keywords" content="skincare products, dermatologist recommended, beauty products, skin care routine, anti-aging, moisturizer, sunscreen">
+    <meta name="author" content="CraftBloom Beauty Team">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://craftbloom.com/article-2.html">
+    <meta property="og:title" content="10 Skincare Products Dermatologists Actually Recommend">
+    <meta property="og:description" content="Expert-backed skincare essentials for healthy, glowing skin.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1556228720-195a672e8a03">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://craftbloom.com/article-2.html">
+    <meta property="twitter:title" content="10 Skincare Products Dermatologists Actually Recommend">
+    <meta property="twitter:description" content="Expert-backed skincare essentials for healthy, glowing skin.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1556228720-195a672e8a03">
+    
+    <title>10 Skincare Products Dermatologists Actually Recommend - CraftBloom</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+                <div class="header-date">
+                    <span id="current-date"></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-header">
+            <div class="container">
+                <div class="logo">
+                    <h1>CraftBloom</h1>
+                    <p class="tagline">Where Lifestyle Meets Excellence</p>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" data-category="fashion">Fashion & Accessories</a></li>
+                    <li><a href="#" data-category="beauty">Health & Beauty</a></li>
+                    <li><a href="#" data-category="home">Home & Garden</a></li>
+                    <li><a href="#" data-category="travel">Travel & Accommodation</a></li>
+                    <li><a href="#" data-category="finance">Finance & Insurance</a></li>
+                    <li><a href="#" data-category="food">Food & Beverage</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Reading Progress Bar -->
+    <div id="reading-progress"></div>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Article Detail -->
+    <article class="article-detail">
+        <!-- Breadcrumb Navigation -->
+        <div class="container">
+            <nav aria-label="Breadcrumb">
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#beauty">Health & Beauty</a></li>
+                    <li aria-current="page">10 Skincare Products Dermatologists Actually Recommend</li>
+                </ol>
+            </nav>
+        </div>
+        
+        <div class="article-detail-header">
+            <div class="category-badge beauty">Health & Beauty</div>
+            <h1>10 Skincare Products Dermatologists Actually Recommend</h1>
+            <div class="article-detail-meta">
+                <span class="author"><i class="far fa-user"></i> Dr. Sarah Chen</span>
+                <span class="date"><i class="far fa-calendar"></i> January 22, 2025</span>
+                <span class="reading-time"><i class="far fa-clock"></i> 6 min read</span>
+            </div>
+        </div>
+
+        <div class="article-hero-image">
+            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=1200&h=600&fit=crop" alt="Skincare Products">
+        </div>
+
+        <div class="article-body">
+            <!-- Share Buttons -->
+            <div class="share-buttons">
+                <h4 style="width: 100%; margin: 0 0 15px 0; color: var(--text-dark);">Share This Article:</h4>
+                <button class="share-btn share-facebook" onclick="shareOnFacebook()">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </button>
+                <button class="share-btn share-twitter" onclick="shareOnTwitter()">
+                    <i class="fab fa-twitter"></i> Twitter
+                </button>
+                <button class="share-btn share-linkedin" onclick="shareOnLinkedIn()">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </button>
+                <button class="share-btn share-pinterest" onclick="shareOnPinterest()">
+                    <i class="fab fa-pinterest-p"></i> Pinterest
+                </button>
+                <button class="share-btn share-copy" onclick="copyLink()">
+                    <i class="fas fa-link"></i> Copy Link
+                </button>
+            </div>
+            
+            <p>With thousands of skincare products flooding the market, it's challenging to separate effective solutions from marketing hype. We consulted board-certified dermatologists to identify products that deliver real, science-backed results. These recommendations are based on clinical evidence, proven ingredients, and years of professional experience treating diverse skin concerns.</p>
+
+            <h2>The Foundation: Understanding Your Skin</h2>
+            <p>Before diving into product recommendations, it's crucial to understand your skin type and specific concerns. Dermatologists emphasize that the best skincare routine is one tailored to your individual needs, whether that's combating acne, addressing aging, or managing sensitivity.</p>
+
+            <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=1000&h=600&fit=crop" alt="Skincare Routine">
+
+            <h2>Essential Products Every Routine Needs</h2>
+            
+            <h3>1. Gentle Cleanser: CeraVe Hydrating Facial Cleanser</h3>
+            <p>Dermatologists consistently recommend CeraVe's hydrating cleanser for its ceramide-rich formula that cleanses without stripping the skin's natural barrier. Suitable for all skin types, this fragrance-free cleanser maintains optimal pH balance while removing impurities.</p>
+            <p><strong>Why it works:</strong> Contains three essential ceramides (1, 3, 6-II) and hyaluronic acid for moisture retention.</p>
+
+            <h3>2. Vitamin C Serum: SkinCeuticals C E Ferulic</h3>
+            <p>Considered the gold standard in vitamin C serums, this antioxidant powerhouse protects against environmental damage while brightening skin tone and promoting collagen production. Though pricey, dermatologists praise its stability and proven efficacy.</p>
+
+            <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=1000&h=600&fit=crop" alt="Serums and Treatments">
+
+            <h3>3. Retinol Treatment: The Ordinary Retinol 0.5% in Squalane</h3>
+            <p>Retinol remains the dermatologist's favorite for anti-aging and acne treatment. The Ordinary offers an accessible, effective option without overwhelming the skin. Start with lower concentrations and gradually increase as your skin builds tolerance.</p>
+            <p><strong>Expert tip:</strong> Apply retinol at night and always follow with sunscreen during the day.</p>
+
+            <h3>4. Sunscreen: La Roche-Posay Anthelios Melt-in Milk SPF 60</h3>
+            <p>Dermatologists unanimously agree: sunscreen is the most important anti-aging product. This lightweight, broad-spectrum formula provides superior UVA/UVB protection without leaving a white cast.</p>
+
+            <div class="product-recommendation">
+                <h3>Dermatologist-Approved Product Lineup</h3>
+                <p>These products have been rigorously tested and proven effective in clinical settings.</p>
+                
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&h=400&fit=crop" alt="CeraVe Cleanser">
+                        <h4>CeraVe Hydrating Cleanser</h4>
+                        <p>Gentle, non-foaming cleanser for all skin types with essential ceramides.</p>
+                        <div class="product-price">$14.99</div>
+                        <a href="#" class="product-btn">Shop Now</a>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=400&h=400&fit=crop" alt="Vitamin C Serum">
+                        <h4>SkinCeuticals C E Ferulic</h4>
+                        <p>Premium antioxidant serum for protection and brightening.</p>
+                        <div class="product-price">$169.00</div>
+                        <a href="#" class="product-btn">Shop Now</a>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1570554886111-e80fcca6a029?w=400&h=400&fit=crop" alt="La Roche-Posay Sunscreen">
+                        <h4>La Roche-Posay SPF 60</h4>
+                        <p>Broad-spectrum protection with antioxidants.</p>
+                        <div class="product-price">$35.99</div>
+                        <a href="#" class="product-btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <h3>5. Hyaluronic Acid Serum: Neutrogena Hydro Boost</h3>
+            <p>This affordable powerhouse delivers intense hydration by attracting and retaining moisture. Dermatologists appreciate its fragrance-free formula that works well under makeup and other skincare products.</p>
+
+            <h3>6. Niacinamide Treatment: Paula's Choice 10% Niacinamide Booster</h3>
+            <p>Niacinamide (Vitamin B3) addresses multiple skin concerns: minimizing pores, improving texture, reducing redness, and regulating oil production. This concentrated treatment can be mixed into moisturizers or applied alone.</p>
+
+            <h3>7. Eye Cream: Olay Regenerist Retinol24 Eye Cream</h3>
+            <p>The delicate eye area requires specialized care. This retinol-based eye cream reduces fine lines and dark circles without irritation, a rare combination that dermatologists endorse.</p>
+
+            <h3>8. Moisturizer: Cetaphil Daily Facial Moisturizer SPF 15</h3>
+            <p>For daytime use, this lightweight moisturizer combines hydration with sun protection. Its non-comedogenic formula suits all skin types and provides a perfect base for makeup.</p>
+
+            <h3>9. Acne Treatment: Differin Gel (Adapalene)</h3>
+            <p>Once prescription-only, Differin is now available over-the-counter. This retinoid effectively treats acne by preventing clogged pores and reducing inflammation. Dermatologists recommend it as a first-line treatment for mild to moderate acne.</p>
+
+            <h3>10. Night Cream: Olay Regenerist Micro-Sculpting Cream</h3>
+            <p>This rich night cream combines niacinamide, peptides, and hyaluronic acid to support skin renewal during sleep. Its anti-aging benefits rival luxury brands at a fraction of the cost.</p>
+
+            <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=1000&h=600&fit=crop" alt="Night Skincare Routine">
+
+            <h2>Building Your Routine</h2>
+            <p>Dermatologists emphasize the importance of introducing products gradually. Start with the basics—cleanser, moisturizer, and sunscreen—then slowly add treatment products. Give each new product 4-6 weeks to show results before adding another.</p>
+
+            <p><strong>Morning Routine:</strong></p>
+            <ol>
+                <li>Gentle cleanser</li>
+                <li>Vitamin C serum</li>
+                <li>Eye cream</li>
+                <li>Moisturizer with SPF</li>
+            </ol>
+
+            <p><strong>Evening Routine:</strong></p>
+            <ol>
+                <li>Gentle cleanser</li>
+                <li>Retinol treatment (3-4 times per week)</li>
+                <li>Hyaluronic acid serum</li>
+                <li>Eye cream</li>
+                <li>Night cream</li>
+            </ol>
+
+            <h2>Final Thoughts</h2>
+            <p>The most expensive products aren't always the most effective. These dermatologist-recommended options prove that science-backed ingredients and proper formulation matter more than luxury branding. Consistency is key—stick with your routine for at least three months to see optimal results. When in doubt, consult a board-certified dermatologist for personalized advice tailored to your specific skin concerns.</p>
+        </div>
+    </article>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Inspired</h2>
+                <p>Subscribe to our newsletter for the latest stories and exclusive content.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>CraftBloom</h3>
+                    <p>Your trusted source for lifestyle inspiration and expert recommendations.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="advertise.html">Advertise</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 CraftBloom. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

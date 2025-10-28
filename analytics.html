@@ -1,0 +1,36 @@
+<!-- Google Analytics Template -->
+<!-- Replace GA_MEASUREMENT_ID with your actual Google Analytics ID -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GA_MEASUREMENT_ID');
+</script>
+
+<!-- Alternative: Google Tag Manager -->
+<!-- Head Section -->
+<!--
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+-->
+
+<!-- Body Section (immediately after <body>) -->
+<!--
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+-->
+
+<!-- Instructions:
+1. Sign up for Google Analytics at https://analytics.google.com/
+2. Create a new property for your website
+3. Get your Measurement ID (format: G-XXXXXXXXXX or UA-XXXXXXXXX)
+4. Replace GA_MEASUREMENT_ID in the code above with your actual ID
+5. Add this code to the <head> section of all your HTML pages
+6. Verify installation in Google Analytics (should see data within 24-48 hours)
+-->
+

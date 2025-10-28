@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CraftBloom</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+                <div class="header-date">
+                    <span id="current-date"></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-header">
+            <div class="container">
+                <div class="logo">
+                    <h1>CraftBloom</h1>
+                    <p class="tagline">Where Lifestyle Meets Excellence</p>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" data-category="fashion">Fashion & Accessories</a></li>
+                    <li><a href="#" data-category="beauty">Health & Beauty</a></li>
+                    <li><a href="#" data-category="home">Home & Garden</a></li>
+                    <li><a href="#" data-category="travel">Travel & Accommodation</a></li>
+                    <li><a href="#" data-category="finance">Finance & Insurance</a></li>
+                    <li><a href="#" data-category="food">Food & Beverage</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+                <button class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p>We'd love to hear from you. Drop us a message!</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="page-content">
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h2>Let's Start a Conversation</h2>
+            <p style="font-size: 1.1rem; color: var(--text-light); max-width: 600px; margin: 20px auto;">Whether you have a question about our content, want to collaborate, or simply want to share feedback, we're here to listen. Your thoughts help us create better content for our community.</p>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 25px;">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">Subject *</label>
+                <input type="text" id="subject" name="subject" required placeholder="How can we help?">
+            </div>
+            
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select id="category" name="category" style="width: 100%; padding: 15px; border: 2px solid var(--border-color); border-radius: 3px; font-family: 'Lato', sans-serif; font-size: 1rem;">
+                    <option value="">Select a category (optional)</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="collaboration">Collaboration Proposal</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="technical">Technical Issue</option>
+                    <option value="advertising">Advertising</option>
+                    <option value="press">Press Inquiry</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" required placeholder="Tell us more about your inquiry..."></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+
+        <!-- Contact Info Grid -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 80px; text-align: center;">
+            <div>
+                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: white; font-size: 2rem;">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3 style="margin-bottom: 10px;">Email Us</h3>
+                <p style="color: var(--text-light);">hello@craftbloom.com</p>
+                <p style="color: var(--text-light);">press@craftbloom.com</p>
+            </div>
+            
+            <div>
+                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: white; font-size: 2rem;">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <h3 style="margin-bottom: 10px;">Call Us</h3>
+                <p style="color: var(--text-light);">+1 (555) 123-4567</p>
+                <p style="color: var(--text-light); font-size: 0.9rem;">Mon-Fri, 9am-6pm EST</p>
+            </div>
+            
+            <div>
+                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: white; font-size: 2rem;">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3 style="margin-bottom: 10px;">Visit Us</h3>
+                <p style="color: var(--text-light);">123 Madison Avenue</p>
+                <p style="color: var(--text-light);">New York, NY 10001</p>
+            </div>
+        </div>
+
+        <!-- Social Media Section -->
+        <div style="text-align: center; margin-top: 80px; padding: 60px 40px; background-color: var(--gray-light); border-radius: 10px;">
+            <h2 style="margin-bottom: 15px;">Connect With Us</h2>
+            <p style="color: var(--text-light); margin-bottom: 30px; font-size: 1.1rem;">Follow us on social media for daily inspiration and behind-the-scenes content</p>
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <a href="https://facebook.com" target="_blank" style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem; transition: transform 0.3s ease;">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem; transition: transform 0.3s ease;">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem; transition: transform 0.3s ease;">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://pinterest.com" target="_blank" style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem; transition: transform 0.3s ease;">
+                    <i class="fab fa-pinterest-p"></i>
+                </a>
+                <a href="https://youtube.com" target="_blank" style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem; transition: transform 0.3s ease;">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem; transition: transform 0.3s ease;">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div style="margin-top: 80px;">
+            <h2 style="text-align: center; margin-bottom: 40px;">Frequently Asked Questions</h2>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="margin-bottom: 30px; padding: 30px; background-color: var(--white); border: 1px solid var(--border-color); border-left: 5px solid var(--primary-color); border-radius: 5px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;">How can I contribute to CraftBloom?</h3>
+                    <p style="color: var(--text-light);">We're always looking for talented writers and photographers. Please send your portfolio and pitch ideas to hello@craftbloom.com with "Contributor Application" in the subject line.</p>
+                </div>
+                
+                <div style="margin-bottom: 30px; padding: 30px; background-color: var(--white); border: 1px solid var(--border-color); border-left: 5px solid var(--primary-color); border-radius: 5px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;">Do you accept advertising or sponsored content?</h3>
+                    <p style="color: var(--text-light);">Yes, we work with brands that align with our values. All sponsored content is clearly labeled. Contact press@craftbloom.com for our media kit and partnership opportunities.</p>
+                </div>
+                
+                <div style="margin-bottom: 30px; padding: 30px; background-color: var(--white); border: 1px solid var(--border-color); border-left: 5px solid var(--primary-color); border-radius: 5px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;">How often do you publish new content?</h3>
+                    <p style="color: var(--text-light);">We publish 3-5 in-depth articles weekly across our six categories. Subscribe to our newsletter to never miss a story.</p>
+                </div>
+                
+                <div style="margin-bottom: 30px; padding: 30px; background-color: var(--white); border: 1px solid var(--border-color); border-left: 5px solid var(--primary-color); border-radius: 5px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;">Can I request specific topics?</h3>
+                    <p style="color: var(--text-light);">Absolutely! We love hearing from our readers. Use the contact form above to suggest topics you'd like us to cover.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to receive our latest articles and exclusive content delivered to your inbox.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>CraftBloom</h3>
+                    <p>Your trusted source for lifestyle inspiration, product reviews, and expert recommendations.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="index.html#fashion">Fashion & Accessories</a></li>
+                        <li><a href="index.html#beauty">Health & Beauty</a></li>
+                        <li><a href="index.html#home">Home & Garden</a></li>
+                        <li><a href="index.html#travel">Travel & Accommodation</a></li>
+                        <li><a href="index.html#finance">Finance & Insurance</a></li>
+                        <li><a href="index.html#food">Food & Beverage</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="advertise.html">Advertise</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> hello@craftbloom.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> New York, NY 10001</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 CraftBloom. All rights reserved. Designed with passion for quality content.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

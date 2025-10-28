@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover how to build a sustainable wardrobe in 2025 with our comprehensive guide. Learn about ethical fashion, capsule wardrobes, and top sustainable brands.">
+    <meta name="keywords" content="sustainable fashion, ethical fashion, capsule wardrobe, eco-friendly clothing, sustainable brands, fashion 2025">
+    <meta name="author" content="Emma Richardson">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://craftbloom.com/article-1.html">
+    <meta property="og:title" content="The Ultimate Guide to Building a Sustainable Wardrobe in 2025">
+    <meta property="og:description" content="Discover how to build a sustainable wardrobe with ethical fashion choices and timeless pieces.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=600&fit=crop">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://craftbloom.com/article-1.html">
+    <meta property="twitter:title" content="The Ultimate Guide to Building a Sustainable Wardrobe in 2025">
+    <meta property="twitter:description" content="Discover how to build a sustainable wardrobe with ethical fashion choices and timeless pieces.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=600&fit=crop">
+    
+    <title>The Ultimate Guide to Building a Sustainable Wardrobe in 2025 - CraftBloom</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+                <div class="header-date">
+                    <span id="current-date"></span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main-header">
+            <div class="container">
+                <div class="logo">
+                    <h1>CraftBloom</h1>
+                    <p class="tagline">Where Lifestyle Meets Excellence</p>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#" data-category="fashion">Fashion & Accessories</a></li>
+                    <li><a href="#" data-category="beauty">Health & Beauty</a></li>
+                    <li><a href="#" data-category="home">Home & Garden</a></li>
+                    <li><a href="#" data-category="travel">Travel & Accommodation</a></li>
+                    <li><a href="#" data-category="finance">Finance & Insurance</a></li>
+                    <li><a href="#" data-category="food">Food & Beverage</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <button class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Reading Progress Bar -->
+    <div id="reading-progress"></div>
+    
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Article Detail -->
+    <article class="article-detail">
+        <!-- Breadcrumb Navigation -->
+        <div class="container">
+            <nav aria-label="Breadcrumb">
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#fashion">Fashion & Accessories</a></li>
+                    <li aria-current="page">The Ultimate Guide to Building a Sustainable Wardrobe in 2025</li>
+                </ol>
+            </nav>
+        </div>
+        
+        <div class="article-detail-header">
+            <div class="category-badge fashion">Fashion & Accessories</div>
+            <h1>The Ultimate Guide to Building a Sustainable Wardrobe in 2025</h1>
+            <div class="article-detail-meta">
+                <span class="author"><i class="far fa-user"></i> Emma Richardson</span>
+                <span class="date"><i class="far fa-calendar"></i> March 15, 2025</span>
+                <span class="reading-time"><i class="far fa-clock"></i> 8 min read</span>
+            </div>
+        </div>
+
+        <div class="article-hero-image">
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=600&fit=crop" alt="Sustainable Fashion">
+        </div>
+
+        <div class="article-body">
+            <!-- Share Buttons -->
+            <div class="share-buttons">
+                <h4 style="width: 100%; margin: 0 0 15px 0; color: var(--text-dark);">Share This Article:</h4>
+                <button class="share-btn share-facebook" onclick="shareOnFacebook()">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </button>
+                <button class="share-btn share-twitter" onclick="shareOnTwitter()">
+                    <i class="fab fa-twitter"></i> Twitter
+                </button>
+                <button class="share-btn share-linkedin" onclick="shareOnLinkedIn()">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </button>
+                <button class="share-btn share-pinterest" onclick="shareOnPinterest()">
+                    <i class="fab fa-pinterest-p"></i> Pinterest
+                </button>
+                <button class="share-btn share-copy" onclick="copyLink()">
+                    <i class="fas fa-link"></i> Copy Link
+                </button>
+            </div>
+            
+            <p>The fashion industry is undergoing a transformative shift, and 2025 marks a pivotal year for sustainable style. As consumers become increasingly aware of the environmental impact of fast fashion, the movement toward building conscious, timeless wardrobes has never been stronger. This comprehensive guide will walk you through everything you need to know about creating a sustainable wardrobe that doesn't compromise on style.</p>
+
+            <h2>Understanding Sustainable Fashion</h2>
+            <p>Sustainable fashion goes beyond simply buying "eco-friendly" labels. It encompasses ethical production practices, fair labor conditions, minimal environmental impact, and longevity of garments. The goal is to reduce waste, support ethical brands, and make purchasing decisions that align with your values while maintaining a wardrobe you truly love.</p>
+
+            <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=1000&h=600&fit=crop" alt="Ethical Fashion Production">
+
+            <h2>The Capsule Wardrobe Concept</h2>
+            <p>A capsule wardrobe is a curated collection of versatile, high-quality pieces that can be mixed and matched to create numerous outfits. Typically consisting of 30-40 items (excluding accessories), a capsule wardrobe focuses on timeless essentials rather than trendy pieces that quickly go out of style.</p>
+
+            <h3>Essential Pieces for Your Sustainable Capsule</h3>
+            <ul>
+                <li><strong>Classic White Button-Down Shirt:</strong> Look for organic cotton or linen options from brands like Everlane or Reformation</li>
+                <li><strong>Well-Fitted Jeans:</strong> Invest in quality denim from sustainable brands like Nudie Jeans or Patagonia</li>
+                <li><strong>Versatile Blazer:</strong> A tailored blazer in a neutral color can elevate any outfit</li>
+                <li><strong>Little Black Dress:</strong> Choose a timeless silhouette that works for multiple occasions</li>
+                <li><strong>Quality Knitwear:</strong> Invest in sustainable wool or cashmere sweaters that will last years</li>
+            </ul>
+
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1000&h=600&fit=crop" alt="Capsule Wardrobe Essentials">
+
+            <h2>Choosing Sustainable Fabrics</h2>
+            <p>The fabrics you choose make a significant difference in your wardrobe's environmental footprint. Natural, organic, and recycled materials are generally more sustainable than synthetic options. Here's what to look for:</p>
+
+            <ul>
+                <li><strong>Organic Cotton:</strong> Grown without harmful pesticides and using less water than conventional cotton</li>
+                <li><strong>Linen:</strong> Biodegradable and requires minimal water and pesticides to grow</li>
+                <li><strong>Tencel/Lyocell:</strong> Made from sustainably sourced wood pulp using a closed-loop process</li>
+                <li><strong>Recycled Polyester:</strong> Gives new life to plastic waste while reducing petroleum use</li>
+                <li><strong>Hemp:</strong> One of the most sustainable fabrics, requiring minimal resources to grow</li>
+            </ul>
+
+            <h2>Top Sustainable Fashion Brands to Know</h2>
+            <p>Supporting ethical brands is crucial to building a sustainable wardrobe. These companies prioritize transparency, fair labor practices, and environmental responsibility:</p>
+
+            <div class="product-recommendation">
+                <h3>Our Top Sustainable Fashion Recommendations</h3>
+                <p>After extensive research and testing, we've curated a list of brands that truly deliver on their sustainability promises while offering exceptional quality and style.</p>
+                
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&h=400&fit=crop" alt="Organic Cotton Basics">
+                        <h4>Organic Basics</h4>
+                        <p>Premium essentials made from sustainable materials with a focus on longevity and minimal waste.</p>
+                        <div class="product-price">$30 - $120</div>
+                        <a href="#" class="product-btn">Visit Store</a>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=400&h=400&fit=crop" alt="Reformation Dresses">
+                        <h4>Reformation</h4>
+                        <p>Trendy, feminine pieces made from sustainable materials with carbon-neutral shipping.</p>
+                        <div class="product-price">$80 - $300</div>
+                        <a href="#" class="product-btn">Visit Store</a>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&h=400&fit=crop" alt="Patagonia Outdoor Wear">
+                        <h4>Patagonia</h4>
+                        <p>Outdoor wear brand committed to environmental activism and fair trade certification.</p>
+                        <div class="product-price">$50 - $400</div>
+                        <a href="#" class="product-btn">Visit Store</a>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Care and Maintenance Tips</h2>
+            <p>Extending the life of your clothes is one of the most impactful things you can do for sustainability. Proper care can double or triple the lifespan of your garments:</p>
+
+            <ul>
+                <li>Wash clothes less frequently (spot clean when possible)</li>
+                <li>Use cold water and eco-friendly detergents</li>
+                <li>Air dry instead of using a dryer</li>
+                <li>Learn basic mending skills to repair minor damage</li>
+                <li>Store clothes properly to prevent damage</li>
+            </ul>
+
+            <img src="https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?w=1000&h=600&fit=crop" alt="Clothing Care and Maintenance">
+
+            <h2>The Second-Hand Revolution</h2>
+            <p>Buying second-hand is one of the most sustainable choices you can make. Thrift stores, consignment shops, and online platforms like Depop, Poshmark, and ThredUp offer incredible finds at fraction of the original price. Vintage shopping not only reduces waste but also allows you to discover unique pieces that set your style apart.</p>
+
+            <h2>Final Thoughts</h2>
+            <p>Building a sustainable wardrobe is a journey, not a destination. Start small, make conscious choices, and remember that the most sustainable garment is the one you already own. By investing in quality over quantity, supporting ethical brands, and caring for your clothes properly, you can create a wardrobe that's both stylish and sustainable for years to come.</p>
+        </div>
+    </article>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Inspired</h2>
+                <p>Subscribe to our newsletter for the latest stories and exclusive content.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>CraftBloom</h3>
+                    <p>Your trusted source for lifestyle inspiration and expert recommendations.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://pinterest.com" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="advertise.html">Advertise</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 CraftBloom. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
